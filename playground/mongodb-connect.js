@@ -8,20 +8,20 @@ MongoClient.connect( 'mongodb://localhost:27017/TodoApp',(err, client) => {
     };
     console.log("Connected to mongo db.");
 
-    var obj = new ObjectId();
-    console.log(obj);
+    // var obj = new ObjectId();
+    // console.log(obj);
     
-    //const db = client.db('TodoApp');
+    const db = client.db('TodoApp');
 
-    // db.collection('Todos').insertOne({
-    //     text: 'Something to do',
-    //     completed: false
-    // }, (err, result) => {
-    //     if (err) {
-    //         console.log('Unable to insert into Todos', err);
-    //     }
-    //     console.log(JSON.stringify(result.ops, undefined, 2));
-    // });
+    db.collection('Todos').insertOne({
+        text: 'Pay rent',
+        completed: false
+    }, (err, result) => {
+        if (err) {
+            console.log('Unable to insert into Todos', err);
+        }
+        console.log(JSON.stringify(result.ops, undefined, 2));
+    });
     
     // db.collection('Users').insertOne({
     //     name: "Alok",
