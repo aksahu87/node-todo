@@ -13,9 +13,8 @@ MongoClient.connect( 'mongodb://localhost:27017/TodoApp',(err, client) => {
     
     const db = client.db('TodoApp');
 
-    db.collection('Todos').insertOne({
-        text: 'Pay rent',
-        completed: false
+    db.collection('Todosnew').insertOne({
+        text: 'Pay rent'
     }, (err, result) => {
         if (err) {
             console.log('Unable to insert into Todos', err);

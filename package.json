@@ -1,17 +1,36 @@
 {
   "name": "todo",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha server/**/*.test.js",
+    "test-watch": "nodemon --exec 'npm test'"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "crypto-js": "^3.1.9-1",
     "express": "^4.16.3",
+    "jsonwebtoken": "^8.3.0",
+    "lodash": "^4.17.10",
     "mongodb": "^3.1.0",
-    "mongoose": "^5.2.0"
-  }
+    "mongoose": "^5.2.0",
+    "validator": "^10.4.0"
+  },
+  "devDependencies": {
+    "expect": "^1.20.2",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.17.5",
+    "supertest": "^3.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aksahu87/node-todo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aksahu87/node-todo/issues"
+  },
+  "homepage": "https://github.com/aksahu87/node-todo#readme",
+  "description": ""
 }
